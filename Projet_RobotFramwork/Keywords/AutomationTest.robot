@@ -42,3 +42,4 @@ La page Myaccount s'affichera avec l'email saisi
 
 Fermeture du navigateur
     Close Browser
+    Log to console    Browser is closed
