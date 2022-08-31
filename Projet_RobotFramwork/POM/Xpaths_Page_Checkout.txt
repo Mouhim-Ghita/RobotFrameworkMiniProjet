@@ -1,0 +1,3 @@
+*** Variables ***
+${xpath_proceedtocheckout}    //a[@class="checkout-button button alt wc-forward"]
+${checkout_page}    //h3[text()='Billing Details']

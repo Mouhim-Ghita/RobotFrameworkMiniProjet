@@ -5,6 +5,6 @@ ${xpath_photo}    //img[@class='attachment-shop_catalog size-shop_catalog wp-pos
 ${xpath_libelle}    //h3
 ${xpath_prix}    //span[@class='price']
 ${article_name}    //h3[contains(text(),'Data')]
-${xpath_Add_To_Basket}    //a[@class='button product_type_simple add_to_cart_button ajax_add_to_cart']
+${xpath_Add_To_Basket}    //h3[text()='JS Data Structures and Algorithm']/parent::a/following-sibling::a[text()='Add to basket']
 ${xpath_view_basket}    //a[text()='View Basket']
 

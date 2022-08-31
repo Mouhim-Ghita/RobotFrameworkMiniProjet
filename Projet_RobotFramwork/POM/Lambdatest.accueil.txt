@@ -1,3 +1,0 @@
-*** Variables ***
-${TitrePage}    //h1
-${SignupButton}     //a[text()='Sign Up']

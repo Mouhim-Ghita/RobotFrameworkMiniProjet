@@ -1,0 +1,25 @@
+*** Variables ***
+${button_panier}    //i[@class="wpmenucart-icon-shopping-cart-0"]
+${page_panier}    //th[text()='Product']
+
+#pavet panier
+${xpath_articlename}    //td[@class='product-name']/child::a
+${xpath_quantity}    //div[@class='quantity']/child::input
+${xpath_price}    //td[@class="product-price"]/child::span
+${xpath_totalprice}    //td[@class="product-subtotal"]/child::span
+${xpath_delete_button}    //a[@title="Remove this item"]
+${article_panier_name}     JS Data Structures and Algorithm
+${article_price}    150.00
+${quantity}    1
+${article_totalprice}   150.00
+
+
+#Basket
+${xpath_basket_title}    //h2[text()='Basket Totals']
+${xpath_basket_subtotal}    //td[@data-title="Subtotal"]//child::span[@class="woocommerce-Price-amount amount"]
+${basket_subtotal}    150.00
+${xpath_basket_tax}    //td[@data-title="Roaming Tax"]/child::span[@class="woocommerce-Price-amount amount"]
+${basket_tax}     7.50
+${xpath_basket_totalprice}    //td[@data-title="Total"]/child::strong/child::span[@class="woocommerce-Price-amount amount"]
+${basket_totalprice}    ₹157.50
+

@@ -39,5 +39,6 @@ Je clique sur le bouton
 La page Myaccount s'affichera avec l'email saisi
     Wait until element is visible    ${message_page_accueil}    ${default_long_timeout}
     log to console      compte bien cree
+
 Fermeture du navigateur
     Close Browser

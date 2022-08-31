@@ -10,10 +10,6 @@ Library           DateTime
 Library           Dialogs
 Library           Screenshot
 Library           OperatingSystem
-Resource    ../Keywords/LambdaTest.keys.txt
-Resource    ../POM/Lambdatest.accueil.txt
-Resource    ../POM/Lambdatest.signup.txt
-Resource    ../POM/Lambdatest.verifemail.txt
 Resource  ../Keywords/AutomationTest.robot
 Resource  ../Keywords/AutomationTestingHistorique.robot
 Resource    ../POM/XpathsSignup.txt
@@ -24,8 +20,13 @@ Resource    ../POM/Xpaths_details_orders.txt
 Resource    ../Keywords/Ajouter_article.robot
 Resource   ../Keywords/Consulter_panier.robot
 Resource   ../Keywords/Articles_with_filter.robot
+Resource   ../Keywords/Checkout_keywords.robot
+Resource   ../Keywords/Panier_keywords.robot
 Resource   ../POM/xpath_category.txt
 Resource    ../POM/Xpath_Basket.txt
+Resource    ../POM/Xpaths_Page_Panier.txt
+Resource    ../POM/Xpaths_Page_Checkout.txt
+
 *** Variables ***
 ${url}    https://practice.automationtesting.in/my-account/
 ${browser}     chrome

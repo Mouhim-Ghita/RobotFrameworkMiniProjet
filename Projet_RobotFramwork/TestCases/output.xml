@@ -1,102 +1,519 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20220830 15:20:41.549" schemaversion="2" generator="Robot 4.1.3 (Python 2.7.18 on win32)">
-<suite source="C:\Users\gmouhim\Documents\sale1\Projet_RobotFramwork\TestCases\AutomationTesting.robot" id="s1" name="AutomationTesting">
-<test id="s1-t1" name="test1">
-<kw name="Given J'accède à l'url" library="AutomationTest">
-<doc>ce keyword sert à l'ouverture de l'url dans le browser</doc>
+<robot rpa="false" generated="20220831 19:48:21.927" schemaversion="2" generator="Robot 4.1.3 (Python 2.7.18 on win32)">
+<suite source="C:\Users\emoqtad\IdeaProjects\Mini-projet-gr3-rbf\RobotFrameworkMiniProjet\Projet_RobotFramwork\TestCases\Afficher_Articles_By_Price.robot" id="s1" name="Afficher Articles By Price">
+<kw type="SETUP" name="Open Browser And Login" library="AutomationTest">
+<doc>ce keyword sert à faire le login dans l'application</doc>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220830 15:20:41.773" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/my-account/'.</msg>
-<status status="PASS" endtime="20220830 15:20:46.953" starttime="20220830 15:20:41.773"/>
+<msg timestamp="20220831 19:48:22.447" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/my-account/'.</msg>
+<status status="PASS" endtime="20220831 19:48:29.526" starttime="20220831 19:48:22.447"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20220830 15:20:47.107" starttime="20220830 15:20:46.953"/>
+<status status="PASS" endtime="20220831 19:48:29.695" starttime="20220831 19:48:29.527"/>
 </kw>
-<status status="PASS" endtime="20220830 15:20:47.107" starttime="20220830 15:20:41.772"/>
-</kw>
-<kw name="And Je suis dans la page d'authentification" library="AutomationTest">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${xpath_Titre_page}</arg>
+<arg>${xpath_email_login}</arg>
 <arg>${default_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" endtime="20220830 15:20:47.178" starttime="20220830 15:20:47.110"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>la page est ouverte</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" endtime="20220830 15:20:47.183" starttime="20220830 15:20:47.179"/>
-</kw>
-<status status="PASS" endtime="20220830 15:20:47.183" starttime="20220830 15:20:47.108"/>
-</kw>
-<kw name="When Je saisis l'email" library="AutomationTest">
-<arg>${email}</arg>
-<kw name="Log To Console" library="BuiltIn">
-<arg>ecriture de de mail</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" endtime="20220830 15:20:47.187" starttime="20220830 15:20:47.186"/>
+<status status="PASS" endtime="20220831 19:48:29.796" starttime="20220831 19:48:29.696"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@name="email"]</arg>
-<arg>${email}</arg>
+<arg>${xpath_email_login}</arg>
+<arg>${email_login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220830 15:20:47.187" level="INFO">Typing text 'ghita.mouhim21@gmail.com' into text field '//input[@name="email"]'.</msg>
-<status status="PASS" endtime="20220830 15:20:47.315" starttime="20220830 15:20:47.187"/>
+<msg timestamp="20220831 19:48:29.797" level="INFO">Typing text 'ghita.test@test.com' into text field '//input[@name='username']'.</msg>
+<status status="PASS" endtime="20220831 19:48:30.311" starttime="20220831 19:48:29.796"/>
 </kw>
-<status status="PASS" endtime="20220830 15:20:47.315" starttime="20220830 15:20:47.185"/>
-</kw>
-<kw name="And Je saisis le mot de passe" library="AutomationTest">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>//input[@id="reg_password"]</arg>
-<arg>Groupe@1439...--</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220830 15:20:47.317" level="INFO">Typing text 'Groupe@1439...--' into text field '//input[@id="reg_password"]'.</msg>
-<status status="PASS" endtime="20220830 15:20:47.447" starttime="20220830 15:20:47.317"/>
-</kw>
-<status status="PASS" endtime="20220830 15:20:47.447" starttime="20220830 15:20:47.316"/>
-</kw>
-<kw name="And Je clique sur le bouton" library="AutomationTest">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//div[contains(text(),"Strong")]</arg>
+<arg>${xpath_password_login}</arg>
 <arg>${default_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220830 15:20:57.660" html="true" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20220830 15:20:57.660" starttime="20220830 15:20:57.523"/>
+<status status="PASS" endtime="20220831 19:48:30.370" starttime="20220831 19:48:30.312"/>
 </kw>
-<msg timestamp="20220830 15:20:57.665" level="FAIL">Element '//div[contains(text(),"Strong")]' not visible after 10 seconds.</msg>
-<status status="FAIL" endtime="20220830 15:20:57.666" starttime="20220830 15:20:47.449"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${xpath_password_login}</arg>
+<arg>${password_login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220831 19:48:30.372" level="INFO">Typing text 'Ghitatest@12345' into text field '//input[@id='password']'.</msg>
+<status status="PASS" endtime="20220831 19:48:30.541" starttime="20220831 19:48:30.371"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_button_login}</arg>
+<arg>${default_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:30.591" starttime="20220831 19:48:30.543"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>//input[@name="register"]</arg>
+<arg>${xpath_button_login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" endtime="20220830 15:20:57.667" starttime="20220830 15:20:57.667"/>
+<msg timestamp="20220831 19:48:30.594" level="INFO">Clicking element '//input[@name='login']'.</msg>
+<status status="PASS" endtime="20220831 19:48:33.330" starttime="20220831 19:48:30.592"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:33.330" starttime="20220831 19:48:22.446"/>
+</kw>
+<test id="s1-t1" name="Scenario: Afficher les articles filtrés par catégorie">
+<kw name="Given je clique sur &quot;Shop&quot;" library="Articles_with_filter">
+<doc>ce keyword permet de cliquer sur Shop</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Xpath_shop}</arg>
+<arg>${default_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:33.398" starttime="20220831 19:48:33.339"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
-<arg>element bien cliquer</arg>
+<arg>Opening Shoping page</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" endtime="20220830 15:20:57.667" starttime="20220830 15:20:57.667"/>
+<status status="PASS" endtime="20220831 19:48:33.400" starttime="20220831 19:48:33.399"/>
 </kw>
-<status status="FAIL" endtime="20220830 15:20:57.669" starttime="20220830 15:20:47.449"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Xpath_shop}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 19:48:33.401" level="INFO">Clicking element '//a[text()='Shop']'.</msg>
+<status status="PASS" endtime="20220831 19:48:35.731" starttime="20220831 19:48:33.401"/>
 </kw>
-<kw name="Then La page Myaccount s'affichera avec l'email saisi" library="AutomationTest">
-<status status="NOT RUN" endtime="20220830 15:20:57.671" starttime="20220830 15:20:57.671"/>
+<status status="PASS" endtime="20220831 19:48:35.732" starttime="20220831 19:48:33.337"/>
 </kw>
-<status status="FAIL" endtime="20220830 15:20:57.672" starttime="20220830 15:20:41.772">Element '//div[contains(text(),"Strong")]' not visible after 10 seconds.</status>
+<kw name="And les articles en vente sont affichés" library="Articles_with_filter">
+<doc>ce keyword permet de voir les articles apres le filtre par catégorie</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Xpath_articles_affiche}</arg>
+<arg>${default_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:35.790" starttime="20220831 19:48:35.736"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>les articles sont bien affichés</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:35.792" starttime="20220831 19:48:35.790"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:35.792" starttime="20220831 19:48:35.734"/>
+</kw>
+<kw name="When je clique sur la catégorie" library="Articles_with_filter">
+<arg>${Xpath_categorie_name}</arg>
+<doc>ce keyword permet de cliquer sur la catégorie souhaitée</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Xpath_categorie_name}</arg>
+<arg>${default_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:35.920" starttime="20220831 19:48:35.795"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>la catégorie souhaité bien affiché</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:35.922" starttime="20220831 19:48:35.921"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Xpath_categorie_name}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 19:48:35.923" level="INFO">Clicking element '//a[text()='JavaScript']'.</msg>
+<status status="PASS" endtime="20220831 19:48:37.860" starttime="20220831 19:48:35.923"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:37.860" starttime="20220831 19:48:35.794"/>
+</kw>
+<kw name="Then Toutes les articles avec la catégorie choisie s'affichent" library="Articles_with_filter">
+<arg>${url_categ_choisi}</arg>
+<doc>ce keyword permet d'afficher les articles qui ont la catégorie choisie</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url_categ_choisi}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220831 19:48:37.876" level="INFO">Current location is 'https://practice.automationtesting.in/product-category/javascript/'.</msg>
+<status status="PASS" endtime="20220831 19:48:37.876" starttime="20220831 19:48:37.865"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>on est dans la bonne catégorie</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:37.878" starttime="20220831 19:48:37.877"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:37.879" starttime="20220831 19:48:37.862"/>
+</kw>
+<kw name="And les articles s'affichent avec une photo, un libellé et un prix" library="Articles_with_filter">
+<arg>${xpath_photo}</arg>
+<arg>${xpath_libelle}</arg>
+<arg>${xpath_prix}</arg>
+<doc>ce keyword permet de verifier si les articles s'affichent avec photo, prix, libelle</doc>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${xpath_photo}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220831 19:48:37.910" level="INFO">Current page contains element '//img[@class='attachment-shop_catalog size-shop_catalog wp-post-image']'.</msg>
+<status status="PASS" endtime="20220831 19:48:37.910" starttime="20220831 19:48:37.885"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>La photo est bien affiché</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:37.912" starttime="20220831 19:48:37.910"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${xpath_libelle}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220831 19:48:37.940" level="INFO">Current page contains element '//h3'.</msg>
+<status status="PASS" endtime="20220831 19:48:37.940" starttime="20220831 19:48:37.913"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>la libellé est bien affiché</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:37.942" starttime="20220831 19:48:37.941"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${xpath_prix}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220831 19:48:38.079" level="INFO">Current page contains element '//span[@class='price']'.</msg>
+<status status="PASS" endtime="20220831 19:48:38.079" starttime="20220831 19:48:37.942"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Le prix est bien affiché</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:38.082" starttime="20220831 19:48:38.081"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220831 19:48:41.095" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20220831 19:48:41.095" starttime="20220831 19:48:38.083"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:41.095" starttime="20220831 19:48:37.881"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:41.097" starttime="20220831 19:48:33.331"/>
 </test>
-<status status="FAIL" endtime="20220830 15:20:57.677" starttime="20220830 15:20:41.552"/>
+<test id="s1-t2" name="Scenario: Ajouter un article au panier et conulter le panier">
+<kw name="Given je suis sur la page des articles filtrés par une catégorie" library="Ajouter_article">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//h3[contains(.,'JS')]</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:41.169" starttime="20220831 19:48:41.109"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>nous sommes dans la bonne categorie</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:41.173" starttime="20220831 19:48:41.170"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:41.173" starttime="20220831 19:48:41.108"/>
+</kw>
+<kw name="When je bascule vers l'article souhaité" library="Ajouter_article">
+<arg>${article_name}</arg>
+<doc>ce keyword permet de basculer vers l'article souhaité</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${article_name}</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:41.230" starttime="20220831 19:48:41.177"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${article_name}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220831 19:48:41.231" level="INFO">Simulating Mouse Over on element '//h3[contains(text(),'Data')]'.</msg>
+<status status="PASS" endtime="20220831 19:48:41.520" starttime="20220831 19:48:41.231"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>hovering the mouse over the article well done</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:41.522" starttime="20220831 19:48:41.520"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:41.523" starttime="20220831 19:48:41.175"/>
+</kw>
+<kw name="And je clique sur le boutton &quot;Add to Basket&quot; pour ajouter l'article souhaité au panier" library="Ajouter_article">
+<arg>${xpath_Add_To_Basket}</arg>
+<doc>ce keyword permet d'ajouter un article au panier</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${article_name}</arg>
+<arg>${default_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:41.578" starttime="20220831 19:48:41.527"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le bouton "Add to basket" est bien affiché</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:41.581" starttime="20220831 19:48:41.579"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpath_Add_To_Basket}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220831 19:48:41.583" level="INFO">Clicking element '//h3[text()='JS Data Structures and Algorithm']/parent::a/following-sibling::a[text()='Add to basket']'.</msg>
+<status status="PASS" endtime="20220831 19:48:41.691" starttime="20220831 19:48:41.582"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>"Add to Basket" button was clicked</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:41.694" starttime="20220831 19:48:41.692"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:41.694" starttime="20220831 19:48:41.525"/>
+</kw>
+<kw name="Then le lien &quot;View Basket&quot; sera ajouter au dessus de l'article" library="Ajouter_article">
+<doc>ce keyword permet d'ajouter un article au panier</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_view_basket}</arg>
+<arg>${default_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:42.038" starttime="20220831 19:48:41.699"/>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${xpath_view_basket}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20220831 19:48:42.076" level="INFO">Current page contains link '//a[text()='View Basket']'.</msg>
+<status status="PASS" endtime="20220831 19:48:42.076" starttime="20220831 19:48:42.039"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le lien "view basket" est bien affiché sur la page</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:42.078" starttime="20220831 19:48:42.077"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220831 19:48:45.094" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20220831 19:48:45.094" starttime="20220831 19:48:42.079"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:45.095" starttime="20220831 19:48:41.697"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:45.096" starttime="20220831 19:48:41.104"/>
+</test>
+<test id="s1-t3" name="Scenario: Consulter le panier apres l'ajout d'un article">
+<kw name="Given je suis sur la page des articles filtrés par une catégorie" library="Ajouter_article">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//h3[contains(.,'JS')]</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:45.164" starttime="20220831 19:48:45.107"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>nous sommes dans la bonne categorie</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:45.168" starttime="20220831 19:48:45.165"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:45.169" starttime="20220831 19:48:45.106"/>
+</kw>
+<kw name="And j'ai basculé vers l'article souhaité" library="Consulter_panier">
+<arg>${article_name}</arg>
+<doc>ce keyword permet de basculer vers l'article souhaité</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${article_name}</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:45.223" starttime="20220831 19:48:45.174"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${article_name}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220831 19:48:45.226" level="INFO">Simulating Mouse Over on element '//h3[contains(text(),'Data')]'.</msg>
+<status status="PASS" endtime="20220831 19:48:45.522" starttime="20220831 19:48:45.225"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>hovering the mouse over the article well done</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:45.525" starttime="20220831 19:48:45.523"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:45.526" starttime="20220831 19:48:45.171"/>
+</kw>
+<kw name="And le lien &quot;View Basket&quot; est ajouté au dessus de l'article" library="Consulter_panier">
+<doc>ce keyword permet d'ajouter un article au panier</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_view_basket}</arg>
+<arg>${default_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:45.583" starttime="20220831 19:48:45.531"/>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<arg>${xpath_view_basket}</arg>
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<msg timestamp="20220831 19:48:45.613" level="INFO">Current page contains link '//a[text()='View Basket']'.</msg>
+<status status="PASS" endtime="20220831 19:48:45.614" starttime="20220831 19:48:45.583"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le lien "view basket" est bien affiché sur la page</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:45.616" starttime="20220831 19:48:45.614"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:45.617" starttime="20220831 19:48:45.529"/>
+</kw>
+<kw name="When je clique sur le lien &quot;view Basket&quot;" library="Consulter_panier">
+<arg>${xpath_view_basket}</arg>
+<doc>ce keyword permet de cliquer sur le link VIEW baseket</doc>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${xpath_view_basket}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220831 19:48:45.621" level="INFO">Clicking link '//a[text()='View Basket']'.</msg>
+<status status="PASS" endtime="20220831 19:48:47.523" starttime="20220831 19:48:45.620"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le lien "view basket" est bien cliqué</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:47.526" starttime="20220831 19:48:47.524"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:47.527" starttime="20220831 19:48:45.619"/>
+</kw>
+<kw name="Then je vais me rediriger vers la page de panier" library="Consulter_panier">
+<arg>${url_panier}</arg>
+<doc>ce keyword permet d'afficher les articles qui ont la catégorie choisie</doc>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${url_panier}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20220831 19:48:47.544" level="INFO">Current location is 'https://practice.automationtesting.in/basket/'.</msg>
+<status status="PASS" endtime="20220831 19:48:47.545" starttime="20220831 19:48:47.531"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>on est dans l'éspace panier</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:47.548" starttime="20220831 19:48:47.546"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:47.549" starttime="20220831 19:48:47.529"/>
+</kw>
+<kw name="And l'article choisi est bien ajouté dans l'espace panier" library="Consulter_panier">
+<arg>${table_aricles}</arg>
+<kw name="Table Cell Should Contain" library="SeleniumLibrary">
+<arg>${table_aricles}</arg>
+<arg>2</arg>
+<arg>3</arg>
+<arg>${article_namee}</arg>
+<doc>Verifies table cell contains text ``expected``.</doc>
+<msg timestamp="20220831 19:48:47.733" level="INFO">Table cell contains 'JS Data Structures and Algorithm'.</msg>
+<status status="PASS" endtime="20220831 19:48:47.734" starttime="20220831 19:48:47.555"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le produit ${article_namee}est bien ajouté</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:47.737" starttime="20220831 19:48:47.735"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220831 19:48:50.753" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20220831 19:48:50.753" starttime="20220831 19:48:47.739"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:50.754" starttime="20220831 19:48:47.551"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:50.755" starttime="20220831 19:48:45.103"/>
+</test>
+<test id="s1-t4" name="Scenario: Vérifier les détails de l'article dans le panier">
+<kw name="Given J'ai déja ajouté un article dans le panier" library="Panier_keywords">
+<kw name="No Operation" library="BuiltIn">
+<doc>Does absolutely nothing.</doc>
+<status status="PASS" endtime="20220831 19:48:50.766" starttime="20220831 19:48:50.765"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:50.767" starttime="20220831 19:48:50.763"/>
+</kw>
+<kw name="When Je suis sur la page panier" library="Panier_keywords">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${page_panier}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20220831 19:48:50.821" level="INFO">Element '//th[text()='Product']' is displayed.</msg>
+<status status="PASS" endtime="20220831 19:48:50.821" starttime="20220831 19:48:50.771"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>page panier vérifier</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:50.823" starttime="20220831 19:48:50.822"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:50.823" starttime="20220831 19:48:50.771"/>
+</kw>
+<kw name="Then La page panier affichera les détails de l'article ajouté" library="Panier_keywords">
+<arg>${article_panier_name}</arg>
+<arg>${article_price}</arg>
+<arg>${quantity}</arg>
+<arg>${article_totalprice}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${page_panier}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:50.868" starttime="20220831 19:48:50.828"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${xpath_articlename}</arg>
+<arg>${article_name}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220831 19:48:50.917" level="INFO">Element '//td[@class='product-name']/child::a' contains text 'JS Data Structures and Algorithm'.</msg>
+<status status="PASS" endtime="20220831 19:48:50.918" starttime="20220831 19:48:50.868"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Article name vérifier</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:50.921" starttime="20220831 19:48:50.919"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${xpath_price}</arg>
+<arg>${price}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220831 19:48:50.973" level="INFO">Element '//td[@class="product-price"]/child::span' contains text '150.00'.</msg>
+<status status="PASS" endtime="20220831 19:48:50.974" starttime="20220831 19:48:50.922"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Price bien vérifier</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:50.975" starttime="20220831 19:48:50.974"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_quantity}</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220831 19:48:51.023" starttime="20220831 19:48:50.975"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${value_quantity}</var>
+<arg>${xpath_quantity}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20220831 19:48:51.056" level="INFO">${value_quantity} = 2</msg>
+<status status="PASS" endtime="20220831 19:48:51.056" starttime="20220831 19:48:51.024"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>la valeur de la quantité : ${value_quantity}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220831 19:48:51.059" starttime="20220831 19:48:51.057"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${value_quantity}</arg>
+<arg>${quantity}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<msg timestamp="20220831 19:48:51.065" level="FAIL">2 != 1</msg>
+<status status="FAIL" endtime="20220831 19:48:51.065" starttime="20220831 19:48:51.060"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${xpath_totalprice}</arg>
+<arg>${total_price}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" endtime="20220831 19:48:51.069" starttime="20220831 19:48:51.068"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Tous les élements sont vérifiés!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" endtime="20220831 19:48:51.070" starttime="20220831 19:48:51.070"/>
+</kw>
+<status status="FAIL" endtime="20220831 19:48:51.073" starttime="20220831 19:48:50.824"/>
+</kw>
+<kw name="And Le bouton de suppression s'affichera" library="Panier_keywords">
+<status status="NOT RUN" endtime="20220831 19:48:51.075" starttime="20220831 19:48:51.075"/>
+</kw>
+<kw name="And Le champ quantité sera modifiable" library="Panier_keywords">
+<status status="NOT RUN" endtime="20220831 19:48:51.077" starttime="20220831 19:48:51.077"/>
+</kw>
+<kw name="And Le pavet &quot;Basket Totals&quot; s'affichera avec ces éléments" library="Panier_keywords">
+<arg>${basket_subtotal}</arg>
+<arg>${basket_tax}</arg>
+<arg>${basket_totalprice}</arg>
+<status status="NOT RUN" endtime="20220831 19:48:51.079" starttime="20220831 19:48:51.079"/>
+</kw>
+<kw name="And Le bouton &quot;Proceed To Checkout&quot; S'affichera" library="Panier_keywords">
+<status status="NOT RUN" endtime="20220831 19:48:51.081" starttime="20220831 19:48:51.081"/>
+</kw>
+<status status="FAIL" endtime="20220831 19:48:51.083" starttime="20220831 19:48:50.759">2 != 1</status>
+</test>
+<kw type="TEARDOWN" name="Fermeture du navigateur" library="AutomationTest">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20220831 19:48:53.547" starttime="20220831 19:48:51.090"/>
+</kw>
+<status status="PASS" endtime="20220831 19:48:53.547" starttime="20220831 19:48:51.089"/>
+</kw>
+<status status="FAIL" endtime="20220831 19:48:53.547" starttime="20220831 19:48:21.931"/>
 </suite>
 <statistics>
 <total>
-<stat fail="1" skip="0" pass="0">All Tests</stat>
+<stat fail="1" skip="0" pass="3">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" skip="0" id="s1" name="AutomationTesting" pass="0">AutomationTesting</stat>
+<stat fail="1" skip="0" id="s1" name="Afficher Articles By Price" pass="3">Afficher Articles By Price</stat>
 </suite>
 </statistics>
 <errors>
