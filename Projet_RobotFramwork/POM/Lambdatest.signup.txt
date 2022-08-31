@@ -1,0 +1,8 @@
+*** Variables ***
+${XpathFullName}     //input[@id='name']
+${XpathEmail}        //input[@id='email']
+${XpathPassword}     //input[@id='userpassword']
+${XpathPhone}        //input[@id='phone']
+${XpathCheckBox}     //samp[@class='customcheckbox w-20 h-20 inline-block bg-white border border-gray-20 relative cursor-pointer mr-10']
+${XpathFreeSignup}      //button[text()='FREE SIGN UP']
+${XpathPhoneError}      //p[contains(text(),'Please enter your phone')]

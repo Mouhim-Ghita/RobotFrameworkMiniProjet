@@ -1,0 +1,7 @@
+*** Variables ***
+${xpath_numero_ordre}    //mark[@class='order-number']
+${xpath_Date_de_commande}    //mark[@class='order-date']
+${xpath_Montant_de_commande}    //td[@class='product-total']
+${xpath_Moyen_de_paiement}    //table[@class='shop_table order_details']/child::tfoot/child::tr/th[text()='Payment Method:']/following-sibling::td
+${xpath_email_historique}    //table[@class='shop_table customer_details']/child::tbody/child::tr/th[text()='Email:']/following-sibling::td
+${xpath_phone_historique}    //table[@class='shop_table customer_details']/child::tbody/child::tr/th[text()='Telephone:']/following-sibling::td

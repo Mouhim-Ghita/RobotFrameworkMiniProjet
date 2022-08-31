@@ -1,0 +1,6 @@
+*** Variables ***
+${xpath_Titre_page}     //h2[contains(text(),"Register")]
+${xpath_email_register}    //input[@name="email"]
+${xpath_password_register}    //input[@id="reg_password"]
+${xpath_message_strong}    //div[contains(text(),"Strong")]
+${xpath_bouton_register}    //input[@name="register"]

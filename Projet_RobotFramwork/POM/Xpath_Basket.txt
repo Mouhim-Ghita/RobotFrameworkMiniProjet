@@ -1,0 +1,4 @@
+*** Variables ***
+
+${table_aricles}    //table[@class='shop_table shop_table_responsive cart']
+${product}    //th[@class='product-name']

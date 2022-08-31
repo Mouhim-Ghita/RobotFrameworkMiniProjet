@@ -1,0 +1,10 @@
+*** Variables ***
+
+${Xpath_categorie_name}    //a[text()='JavaScript']
+${xpath_photo}    //img[@class='attachment-shop_catalog size-shop_catalog wp-post-image']
+${xpath_libelle}    //h3
+${xpath_prix}    //span[@class='price']
+${article_name}    //h3[contains(text(),'Data')]
+${xpath_Add_To_Basket}    //a[@class='button product_type_simple add_to_cart_button ajax_add_to_cart']
+${xpath_view_basket}    //a[text()='View Basket']
+

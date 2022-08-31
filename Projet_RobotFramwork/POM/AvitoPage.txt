@@ -1,0 +1,3 @@
+*** Variables ***
+${avito.champ.recherche}    //input[@type="text" and @autocomplete="off" and @placeholder="Que recherchez-vous?"]
+${avito.button.rechercher}  //button[@type="submit" and @aria-label="Rechercher"]

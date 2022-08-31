@@ -1,0 +1,5 @@
+*** Variables ***
+${message_page_accueil}    //p[contains(text(),'Hello')]
+${xpaths_dashboard}    //a[contains(text(),'Dashboard')]
+${xapths_order}    //a[contains(text(),'Orders')]
+${xpaths_bouton_view}    //a[contains(text(),'View')]

@@ -1,0 +1,9 @@
+*** Keywords ***
+
+TestSetUp
+    Log   Start TestSetup
+
+TestTearDown
+    Run Keyword And Ignore Error    Close All Browsers
+    Run Keyword If Test Failed  Capture Page ScreenShot
+    Close Browser

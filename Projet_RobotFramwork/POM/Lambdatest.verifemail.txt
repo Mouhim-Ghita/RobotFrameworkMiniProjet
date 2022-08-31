@@ -1,0 +1,2 @@
+*** Variables ***
+${XpathVerificationEmail}       //h1[contains(text(),'Please verify your email')]

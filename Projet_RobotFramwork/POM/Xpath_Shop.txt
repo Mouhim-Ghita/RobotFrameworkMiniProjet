@@ -1,0 +1,3 @@
+*** Variables ***
+${Xpath_shop}   //a[text()='Shop']
+${Xpath_articles_affiche}    //h4[text()='Product Categories']

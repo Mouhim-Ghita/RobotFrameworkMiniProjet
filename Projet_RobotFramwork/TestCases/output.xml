@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20220830 15:20:41.549" schemaversion="2" generator="Robot 4.1.3 (Python 2.7.18 on win32)">
+<suite source="C:\Users\gmouhim\Documents\sale1\Projet_RobotFramwork\TestCases\AutomationTesting.robot" id="s1" name="AutomationTesting">
+<test id="s1-t1" name="test1">
+<kw name="Given J'accède à l'url" library="AutomationTest">
+<doc>ce keyword sert à l'ouverture de l'url dans le browser</doc>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220830 15:20:41.773" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/my-account/'.</msg>
+<status status="PASS" endtime="20220830 15:20:46.953" starttime="20220830 15:20:41.773"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20220830 15:20:47.107" starttime="20220830 15:20:46.953"/>
+</kw>
+<status status="PASS" endtime="20220830 15:20:47.107" starttime="20220830 15:20:41.772"/>
+</kw>
+<kw name="And Je suis dans la page d'authentification" library="AutomationTest">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_Titre_page}</arg>
+<arg>${default_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220830 15:20:47.178" starttime="20220830 15:20:47.110"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>la page est ouverte</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220830 15:20:47.183" starttime="20220830 15:20:47.179"/>
+</kw>
+<status status="PASS" endtime="20220830 15:20:47.183" starttime="20220830 15:20:47.108"/>
+</kw>
+<kw name="When Je saisis l'email" library="AutomationTest">
+<arg>${email}</arg>
+<kw name="Log To Console" library="BuiltIn">
+<arg>ecriture de de mail</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220830 15:20:47.187" starttime="20220830 15:20:47.186"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@name="email"]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220830 15:20:47.187" level="INFO">Typing text 'ghita.mouhim21@gmail.com' into text field '//input[@name="email"]'.</msg>
+<status status="PASS" endtime="20220830 15:20:47.315" starttime="20220830 15:20:47.187"/>
+</kw>
+<status status="PASS" endtime="20220830 15:20:47.315" starttime="20220830 15:20:47.185"/>
+</kw>
+<kw name="And Je saisis le mot de passe" library="AutomationTest">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@id="reg_password"]</arg>
+<arg>Groupe@1439...--</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220830 15:20:47.317" level="INFO">Typing text 'Groupe@1439...--' into text field '//input[@id="reg_password"]'.</msg>
+<status status="PASS" endtime="20220830 15:20:47.447" starttime="20220830 15:20:47.317"/>
+</kw>
+<status status="PASS" endtime="20220830 15:20:47.447" starttime="20220830 15:20:47.316"/>
+</kw>
+<kw name="And Je clique sur le bouton" library="AutomationTest">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//div[contains(text(),"Strong")]</arg>
+<arg>${default_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220830 15:20:57.660" html="true" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220830 15:20:57.660" starttime="20220830 15:20:57.523"/>
+</kw>
+<msg timestamp="20220830 15:20:57.665" level="FAIL">Element '//div[contains(text(),"Strong")]' not visible after 10 seconds.</msg>
+<status status="FAIL" endtime="20220830 15:20:57.666" starttime="20220830 15:20:47.449"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//input[@name="register"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" endtime="20220830 15:20:57.667" starttime="20220830 15:20:57.667"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>element bien cliquer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" endtime="20220830 15:20:57.667" starttime="20220830 15:20:57.667"/>
+</kw>
+<status status="FAIL" endtime="20220830 15:20:57.669" starttime="20220830 15:20:47.449"/>
+</kw>
+<kw name="Then La page Myaccount s'affichera avec l'email saisi" library="AutomationTest">
+<status status="NOT RUN" endtime="20220830 15:20:57.671" starttime="20220830 15:20:57.671"/>
+</kw>
+<status status="FAIL" endtime="20220830 15:20:57.672" starttime="20220830 15:20:41.772">Element '//div[contains(text(),"Strong")]' not visible after 10 seconds.</status>
+</test>
+<status status="FAIL" endtime="20220830 15:20:57.677" starttime="20220830 15:20:41.552"/>
+</suite>
+<statistics>
+<total>
+<stat fail="1" skip="0" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" skip="0" id="s1" name="AutomationTesting" pass="0">AutomationTesting</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,19 @@
+*** Keywords ***
+OuvrirUrlAvito
+    [Arguments]     ${Url}    ${Browser}
+    [Documentation]     ce keyword permet d'ouvrir le site Avito sur le navigateur chrome
+    Open Browser    ${Url}    ${Browser}
+    Maximize Browser Window
+
+RechercherUnBien
+    [Arguments]     ${xpath_champ_rechere}   ${valeur}
+    [Documentation]     ce keyword permet rechercher un bien sur le site avito
+    Wait Until Element Is Visible    ${xpath_champ_rechere}   10s
+    Click Element    ${xpath_champ_rechere}
+    Input Text    ${xpath_champ_rechere}   ${valeur}
+
+CliquerButtonRecherche
+    [Arguments]     ${xpath_button_rechereche}
+    [Documentation]     ce keyword permet cliquer sur le button de rechrche du site avito
+    Wait Until Element Is Visible    ${xpath_button_rechereche}   6s
+    Click Button    ${xpath_button_rechereche}

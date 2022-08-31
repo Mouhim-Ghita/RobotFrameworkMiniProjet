@@ -1,0 +1,39 @@
+*** Settings ***
+Library           SeleniumLibrary
+Library           Process
+Library           OperatingSystem
+Library           String
+Library           Collections
+Library           Screenshot
+Library           String
+Library           DateTime
+Library           Dialogs
+Library           Screenshot
+Library           OperatingSystem
+Resource    ../Keywords/LambdaTest.keys.txt
+Resource    ../POM/Lambdatest.accueil.txt
+Resource    ../POM/Lambdatest.signup.txt
+Resource    ../POM/Lambdatest.verifemail.txt
+Resource  ../Keywords/AutomationTest.robot
+Resource  ../Keywords/AutomationTestingHistorique.robot
+Resource    ../POM/XpathsSignup.txt
+Resource    ../POM/Xpaths_Page_Accueil.txt
+Resource    ../POM/XpathsLogin.txt
+Resource    ../POM/Xpath_Shop.txt
+Resource    ../POM/Xpaths_details_orders.txt
+Resource    ../Keywords/Ajouter_article.robot
+Resource   ../Keywords/Consulter_panier.robot
+Resource   ../Keywords/Articles_with_filter.robot
+Resource   ../POM/xpath_category.txt
+Resource    ../POM/Xpath_Basket.txt
+*** Variables ***
+${url}    https://practice.automationtesting.in/my-account/
+${browser}     chrome
+${default_timeout}    10s
+${default_long_timeout}    30s
+${password}    Groupe3@123...--
+${valeur1}    groupe3
+${valeur2}    miniprojet
+${url_categ_choisi}    https://practice.automationtesting.in/product-category/javascript/
+${url_panier}    https://practice.automationtesting.in/basket/
+${article_namee}    JS Data Structures and Algorithm
