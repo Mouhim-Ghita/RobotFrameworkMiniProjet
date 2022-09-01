@@ -41,7 +41,7 @@ Le pavet "Basket Totals" s'affichera avec ces éléments
      Log to console     le titre Basket Totals est visible
      Element Should Contain    ${xpath_basket_subtotal}    ${subtotal}
      Log to console     le Subtotal est bien vérifier
-     Element Should Contain    ${xpath_basket_tax}    ${tax}
+     Element Should Contain    ${xpath_basket_tax}    ${basket_tax}
      Log to console     la taxe est bien vérifier
      Element Should Contain    ${xpath_basket_totalprice}    ${total}
      Log to console     le totale est bien vérifier
