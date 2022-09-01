@@ -19,7 +19,6 @@ la page contient "<Numero de commande>" et "<Date de commande>"
     Wait until element is visible    ${xpath_Date_de_commande}
     ${valeur_date_comande}    get text    ${xpath_Date_de_commande}
     Log To Console    Date de commande est visible et sa valeur est: ${valeur_date_comande}
-
 un tableau avec "<Montant de commande>","<Moyen de paiement>" est affiché
     Wait until element is visible    ${xpath_Montant_de_commande}    ${default_long_timeout}
     ${valeur_montant}    get text    ${xpath_Montant_de_commande}
