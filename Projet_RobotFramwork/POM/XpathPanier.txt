@@ -1,0 +1,5 @@
+*** Variables ***
+
+${button_panier}    //i[@class="wpmenucart-icon-shopping-cart-0"]
+${page_panier}    //th[text()='Product']
+${XpathProceed}    //a[contains(text(),'Proceed to Checkout')]

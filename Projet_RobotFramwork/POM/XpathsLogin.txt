@@ -2,5 +2,5 @@
 ${xpath_email_login}        //input[@name='username']
 ${xpath_password_login}     //input[@id='password']
 ${xpath_button_login}       //input[@name='login']
-${email_login}      ghita.test@test.com
-${password_login}   Ghitatest@12345
+${email_login}      groupe3.miniprojet.@gmail.com
+${password_login}   Groupe3@123...--

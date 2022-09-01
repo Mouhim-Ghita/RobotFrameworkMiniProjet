@@ -10,6 +10,11 @@ Library           DateTime
 Library           Dialogs
 Library           Screenshot
 Library           OperatingSystem
+Resource    ../Keywords/CheckOut.robot
+Resource    ../Keywords/OrderConf.robot
+Resource    ../Keywords/Panier.robot
+Resource    ../Pom/XpathCheckOut.txt
+Resource    ../Pom/XpathPanier.txt
 Resource  ../Keywords/AutomationTest.robot
 Resource  ../Keywords/AutomationTestingHistorique.robot
 Resource    ../POM/XpathsSignup.txt
@@ -38,3 +43,14 @@ ${valeur2}    miniprojet
 ${url_categ_choisi}    https://practice.automationtesting.in/product-category/javascript/
 ${url_panier}    https://practice.automationtesting.in/basket/
 ${article_namee}    JS Data Structures and Algorithm
+${Firstname}    Adam
+${Lastname}    Uzumez
+${E-mail}    adam@gmail.com
+${Phone}    0666666666
+${Adress}    Sidimaarouf
+${city}    Casablanca
+${State}   XXXXXX
+${Zip}   63200
+${NameRadioButton}    payment_method
+${ValueRadioButton}   bacs
+${checkout_page}    //h3[text()='Billing Details']

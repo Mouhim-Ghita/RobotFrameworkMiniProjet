@@ -35,6 +35,15 @@ Scenario: Vérifier les détails de l'article dans le panier
     And Le pavet "Basket Totals" s'affichera avec ces éléments    ${basket_subtotal}    ${basket_tax}     ${basket_totalprice}
     And Le bouton "Proceed To Checkout" S'affichera
 
+Scenario: test case
+    Given Je click sur le bouton "proceed to checkout"
+    When je saisis les champs
+    And je choisis un methode de paiement
+    And je click sur le bouton "placeorder"
+    Then je suis rederiger vers la page de confirmation
+    And je verifie les details de la commande
+
+
 
 
 
