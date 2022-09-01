@@ -16,17 +16,10 @@ ${article_totalprice}   150.00
 
 #Basket
 ${xpath_basket_title}    //h2[text()='Basket Totals']
-${xpath_basket_subtotal}    //td[@data-title="Subtotal"]/child::span
+${xpath_basket_subtotal}    //td[@data-title="Subtotal"]//child::span
 ${basket_subtotal}    150.00
-<<<<<<< HEAD
-${xpath_basket_tax}    //span[text()='3.00']
-${basket_tax}     3.00
+${xpath_basket_tax}    //td[@data-title='Roaming Tax']/child::span
+${basket_tax}     7.50
 ${xpath_basket_totalprice}    //td[@data-title="Total"]/child::strong/child::span
-${basket_totalprice}    153.00
-=======
-${xpath_basket_tax}    //td[@data-title='Tax']/child::span
-${basket_tax}     ₹3.00
-${xpath_basket_totalprice}    //td[@data-title="Total"]/child::strong/child::span
-${basket_totalprice}    ₹153.00
->>>>>>> f336caab250ac73fe5b125316c3db9c69840f0bb
+${basket_totalprice}    ₹157.50
 
