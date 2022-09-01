@@ -1,6 +1,7 @@
 *** Keywords ***
 Je suis dans la page "MYACCOUNT"
     Wait Until Element Is Visible    ${xpaths_dashboard}    ${default_long_timeout}
+    Click element    ${xpaths_dashboard}
     Log To Console    la page ouverte est MyACCOUNT
 Je clique sur le bouton "ORDERS"
     Wait until element is visible    ${xapths_order}    ${default_long_timeout}

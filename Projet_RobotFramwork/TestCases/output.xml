@@ -1,80 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.8.0 on win32)" generated="20220901 10:27:13.506" rpa="false" schemaversion="3">
-<suite id="s1" name="Afficher Articles By Price" source="C:\Users\omouhibi\Desktop\Projet\RobotFrameworkMiniProjet\Projet_RobotFramwork\TestCases\Afficher_Articles_By_Price.robot">
-<kw name="Open Browser And Login" library="AutomationTest" type="SETUP">
+<robot rpa="false" generated="20220901 10:40:00.426" schemaversion="2" generator="Robot 4.1.3 (Python 2.7.18 on win32)">
+<suite source="C:\Users\gmouhim\Desktop\Automatisation miniprojet RF\RobotFrameworkMiniProjet\Projet_RobotFramwork\TestCases\AutomatisationTesting.robot" id="s1" name="AutomatisationTesting">
+<kw type="SETUP" name="Open Browser And Login" library="AutomationTest">
 <doc>ce keyword sert à faire le login dans l'application</doc>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220901 10:27:13.886" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/my-account/'.</msg>
-<status status="PASS" starttime="20220901 10:27:13.886" endtime="20220901 10:27:35.300"/>
+<msg timestamp="20220901 10:40:00.811" level="INFO">Opening browser 'chrome' to base url 'https://practice.automationtesting.in/my-account/'.</msg>
+<status status="PASS" endtime="20220901 10:40:07.768" starttime="20220901 10:40:00.811"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220901 10:27:35.300" endtime="20220901 10:27:35.446"/>
+<status status="PASS" endtime="20220901 10:40:07.905" starttime="20220901 10:40:07.769"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${xpath_email_login}</arg>
 <arg>${default_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:27:35.446" endtime="20220901 10:27:35.532"/>
+<status status="PASS" endtime="20220901 10:40:07.958" starttime="20220901 10:40:07.906"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${xpath_email_login}</arg>
 <arg>${email_login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220901 10:27:35.532" level="INFO">Typing text 'groupe3.miniprojet.@gmail.com' into text field '//input[@name='username']'.</msg>
-<status status="PASS" starttime="20220901 10:27:35.532" endtime="20220901 10:27:35.807"/>
+<msg timestamp="20220901 10:40:07.960" level="INFO">Typing text 'groupe3.miniprojet.@gmail.com' into text field '//input[@name='username']'.</msg>
+<status status="PASS" endtime="20220901 10:40:08.119" starttime="20220901 10:40:07.959"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${xpath_password_login}</arg>
 <arg>${default_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:27:35.807" endtime="20220901 10:27:35.857"/>
+<status status="PASS" endtime="20220901 10:40:08.155" starttime="20220901 10:40:08.120"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${xpath_password_login}</arg>
 <arg>${password_login}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220901 10:27:35.857" level="INFO">Typing text 'Groupe3@123...--' into text field '//input[@id='password']'.</msg>
-<status status="PASS" starttime="20220901 10:27:35.857" endtime="20220901 10:27:36.334"/>
+<msg timestamp="20220901 10:40:08.157" level="INFO">Typing text 'Groupe3@123...--' into text field '//input[@id='password']'.</msg>
+<status status="PASS" endtime="20220901 10:40:08.258" starttime="20220901 10:40:08.156"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${xpath_button_login}</arg>
 <arg>${default_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:27:36.334" endtime="20220901 10:27:36.383"/>
+<status status="PASS" endtime="20220901 10:40:08.293" starttime="20220901 10:40:08.259"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${xpath_button_login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:27:36.383" level="INFO">Clicking element '//input[@name='login']'.</msg>
-<status status="PASS" starttime="20220901 10:27:36.383" endtime="20220901 10:27:52.717"/>
+<msg timestamp="20220901 10:40:08.294" level="INFO">Clicking element '//input[@name='login']'.</msg>
+<status status="PASS" endtime="20220901 10:40:10.705" starttime="20220901 10:40:08.294"/>
 </kw>
-<status status="PASS" starttime="20220901 10:27:13.886" endtime="20220901 10:27:52.717"/>
+<status status="PASS" endtime="20220901 10:40:10.706" starttime="20220901 10:40:00.810"/>
 </kw>
-<test id="s1-t1" name="Scenario: Afficher les articles filtrés par catégorie" line="8">
+<test id="s1-t1" name="Scenario: Afficher les articles filtrés par catégorie">
 <kw name="Given je clique sur &quot;Shop&quot;" library="Articles_with_filter">
 <doc>ce keyword permet de cliquer sur Shop</doc>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Xpath_shop}</arg>
 <arg>${default_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:27:52.726" endtime="20220901 10:27:52.785"/>
+<status status="PASS" endtime="20220901 10:40:10.747" starttime="20220901 10:40:10.710"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Opening Shoping page</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:27:52.785" endtime="20220901 10:27:52.785"/>
+<status status="PASS" endtime="20220901 10:40:10.750" starttime="20220901 10:40:10.748"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Xpath_shop}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:27:52.785" level="INFO">Clicking element '//a[text()='Shop']'.</msg>
-<status status="PASS" starttime="20220901 10:27:52.785" endtime="20220901 10:28:24.151"/>
+<msg timestamp="20220901 10:40:10.751" level="INFO">Clicking element '//a[text()='Shop']'.</msg>
+<status status="PASS" endtime="20220901 10:40:12.861" starttime="20220901 10:40:10.751"/>
 </kw>
-<status status="PASS" starttime="20220901 10:27:52.725" endtime="20220901 10:28:24.151"/>
+<status status="PASS" endtime="20220901 10:40:12.862" starttime="20220901 10:40:10.709"/>
 </kw>
 <kw name="And les articles en vente sont affichés" library="Articles_with_filter">
 <doc>ce keyword permet de voir les articles apres le filtre par catégorie</doc>
@@ -82,14 +82,14 @@
 <arg>${Xpath_articles_affiche}</arg>
 <arg>${default_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:24.159" endtime="20220901 10:28:24.216"/>
+<status status="PASS" endtime="20220901 10:40:12.898" starttime="20220901 10:40:12.864"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>les articles sont bien affichés</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:24.216" endtime="20220901 10:28:24.216"/>
+<status status="PASS" endtime="20220901 10:40:12.900" starttime="20220901 10:40:12.899"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:24.159" endtime="20220901 10:28:24.216"/>
+<status status="PASS" endtime="20220901 10:40:12.900" starttime="20220901 10:40:12.863"/>
 </kw>
 <kw name="When je clique sur la catégorie" library="Articles_with_filter">
 <arg>${Xpath_categorie_name}</arg>
@@ -98,20 +98,20 @@
 <arg>${Xpath_categorie_name}</arg>
 <arg>${default_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:24.216" endtime="20220901 10:28:24.284"/>
+<status status="PASS" endtime="20220901 10:40:12.941" starttime="20220901 10:40:12.903"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>la catégorie souhaité bien affiché</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:24.284" endtime="20220901 10:28:24.284"/>
+<status status="PASS" endtime="20220901 10:40:12.942" starttime="20220901 10:40:12.941"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Xpath_categorie_name}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:24.284" level="INFO">Clicking element '//a[text()='JavaScript']'.</msg>
-<status status="PASS" starttime="20220901 10:28:24.284" endtime="20220901 10:28:26.755"/>
+<msg timestamp="20220901 10:40:12.944" level="INFO">Clicking element '//a[text()='JavaScript']'.</msg>
+<status status="PASS" endtime="20220901 10:40:14.183" starttime="20220901 10:40:12.943"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:24.216" endtime="20220901 10:28:26.755"/>
+<status status="PASS" endtime="20220901 10:40:14.183" starttime="20220901 10:40:12.902"/>
 </kw>
 <kw name="Then Toutes les articles avec la catégorie choisie s'affichent" library="Articles_with_filter">
 <arg>${url_categ_choisi}</arg>
@@ -119,15 +119,15 @@
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>${url_categ_choisi}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20220901 10:28:26.767" level="INFO">Current location is 'https://practice.automationtesting.in/product-category/javascript/'.</msg>
-<status status="PASS" starttime="20220901 10:28:26.755" endtime="20220901 10:28:26.767"/>
+<msg timestamp="20220901 10:40:14.192" level="INFO">Current location is 'https://practice.automationtesting.in/product-category/javascript/'.</msg>
+<status status="PASS" endtime="20220901 10:40:14.192" starttime="20220901 10:40:14.187"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>on est dans la bonne catégorie</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:26.767" endtime="20220901 10:28:26.776"/>
+<status status="PASS" endtime="20220901 10:40:14.194" starttime="20220901 10:40:14.193"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:26.755" endtime="20220901 10:28:26.776"/>
+<status status="PASS" endtime="20220901 10:40:14.195" starttime="20220901 10:40:14.186"/>
 </kw>
 <kw name="And les articles s'affichent avec une photo, un libellé et un prix" library="Articles_with_filter">
 <arg>${xpath_photo}</arg>
@@ -137,60 +137,60 @@
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>${xpath_photo}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20220901 10:28:26.800" level="INFO">Current page contains element '//img[@class='attachment-shop_catalog size-shop_catalog wp-post-image']'.</msg>
-<status status="PASS" starttime="20220901 10:28:26.782" endtime="20220901 10:28:26.800"/>
+<msg timestamp="20220901 10:40:14.217" level="INFO">Current page contains element '//img[@class='attachment-shop_catalog size-shop_catalog wp-post-image']'.</msg>
+<status status="PASS" endtime="20220901 10:40:14.217" starttime="20220901 10:40:14.200"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>La photo est bien affiché</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:26.800" endtime="20220901 10:28:26.800"/>
+<status status="PASS" endtime="20220901 10:40:14.220" starttime="20220901 10:40:14.218"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>${xpath_libelle}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20220901 10:28:26.817" level="INFO">Current page contains element '//h3'.</msg>
-<status status="PASS" starttime="20220901 10:28:26.800" endtime="20220901 10:28:26.817"/>
+<msg timestamp="20220901 10:40:14.236" level="INFO">Current page contains element '//h3'.</msg>
+<status status="PASS" endtime="20220901 10:40:14.236" starttime="20220901 10:40:14.221"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>la libellé est bien affiché</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:26.817" endtime="20220901 10:28:26.831"/>
+<status status="PASS" endtime="20220901 10:40:14.238" starttime="20220901 10:40:14.237"/>
 </kw>
 <kw name="Page Should Contain Element" library="SeleniumLibrary">
 <arg>${xpath_prix}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20220901 10:28:26.848" level="INFO">Current page contains element '//span[@class='price']'.</msg>
-<status status="PASS" starttime="20220901 10:28:26.831" endtime="20220901 10:28:26.848"/>
+<msg timestamp="20220901 10:40:14.252" level="INFO">Current page contains element '//span[@class='price']'.</msg>
+<status status="PASS" endtime="20220901 10:40:14.252" starttime="20220901 10:40:14.239"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Le prix est bien affiché</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:26.848" endtime="20220901 10:28:26.848"/>
+<status status="PASS" endtime="20220901 10:40:14.253" starttime="20220901 10:40:14.252"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220901 10:28:29.854" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220901 10:28:26.848" endtime="20220901 10:28:29.854"/>
+<msg timestamp="20220901 10:40:17.255" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20220901 10:40:17.256" starttime="20220901 10:40:14.254"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:26.776" endtime="20220901 10:28:29.854"/>
+<status status="PASS" endtime="20220901 10:40:17.256" starttime="20220901 10:40:14.198"/>
 </kw>
-<status status="PASS" starttime="20220901 10:27:52.717" endtime="20220901 10:28:29.854"/>
+<status status="PASS" endtime="20220901 10:40:17.258" starttime="20220901 10:40:10.706"/>
 </test>
-<test id="s1-t2" name="Scenario: Ajouter un article au panier et conulter le panier" line="15">
+<test id="s1-t2" name="Scenario: Ajouter un article au panier et conulter le panier">
 <kw name="Given je suis sur la page des articles filtrés par une catégorie" library="Ajouter_article">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//h3[contains(.,'JS')]</arg>
 <arg>${default_long_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:29.854" endtime="20220901 10:28:29.913"/>
+<status status="PASS" endtime="20220901 10:40:17.305" starttime="20220901 10:40:17.267"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>nous sommes dans la bonne categorie</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:29.913" endtime="20220901 10:28:29.913"/>
+<status status="PASS" endtime="20220901 10:40:17.306" starttime="20220901 10:40:17.305"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:29.854" endtime="20220901 10:28:29.913"/>
+<status status="PASS" endtime="20220901 10:40:17.307" starttime="20220901 10:40:17.265"/>
 </kw>
 <kw name="When je bascule vers l'article souhaité" library="Ajouter_article">
 <arg>${article_name}</arg>
@@ -199,20 +199,20 @@
 <arg>${article_name}</arg>
 <arg>${default_long_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:29.913" endtime="20220901 10:28:29.962"/>
+<status status="PASS" endtime="20220901 10:40:17.348" starttime="20220901 10:40:17.310"/>
 </kw>
 <kw name="Mouse Over" library="SeleniumLibrary">
 <arg>${article_name}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220901 10:28:29.962" level="INFO">Simulating Mouse Over on element '//h3[contains(text(),'Data')]'.</msg>
-<status status="PASS" starttime="20220901 10:28:29.962" endtime="20220901 10:28:30.294"/>
+<msg timestamp="20220901 10:40:17.349" level="INFO">Simulating Mouse Over on element '//h3[contains(text(),'Data')]'.</msg>
+<status status="PASS" endtime="20220901 10:40:17.630" starttime="20220901 10:40:17.349"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>hovering the mouse over the article well done</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:30.294" endtime="20220901 10:28:30.294"/>
+<status status="PASS" endtime="20220901 10:40:17.631" starttime="20220901 10:40:17.630"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:29.913" endtime="20220901 10:28:30.294"/>
+<status status="PASS" endtime="20220901 10:40:17.632" starttime="20220901 10:40:17.309"/>
 </kw>
 <kw name="And je clique sur le boutton &quot;Add to Basket&quot; pour ajouter l'article souhaité au panier" library="Ajouter_article">
 <arg>${xpath_Add_To_Basket}</arg>
@@ -221,25 +221,25 @@
 <arg>${article_name}</arg>
 <arg>${default_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:30.294" endtime="20220901 10:28:30.343"/>
+<status status="PASS" endtime="20220901 10:40:17.669" starttime="20220901 10:40:17.636"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>le bouton "Add to basket" est bien affiché</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:30.343" endtime="20220901 10:28:30.343"/>
+<status status="PASS" endtime="20220901 10:40:17.671" starttime="20220901 10:40:17.670"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${xpath_Add_To_Basket}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:30.343" level="INFO">Clicking element '//h3[text()='JS Data Structures and Algorithm']/parent::a/following-sibling::a[text()='Add to basket']'.</msg>
-<status status="PASS" starttime="20220901 10:28:30.343" endtime="20220901 10:28:30.462"/>
+<msg timestamp="20220901 10:40:17.672" level="INFO">Clicking element '//h3[text()='JS Data Structures and Algorithm']/parent::a/following-sibling::a[text()='Add to basket']'.</msg>
+<status status="PASS" endtime="20220901 10:40:17.739" starttime="20220901 10:40:17.672"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>"Add to Basket" button was clicked</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:30.464" endtime="20220901 10:28:30.465"/>
+<status status="PASS" endtime="20220901 10:40:17.741" starttime="20220901 10:40:17.739"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:30.294" endtime="20220901 10:28:30.465"/>
+<status status="PASS" endtime="20220901 10:40:17.741" starttime="20220901 10:40:17.634"/>
 </kw>
 <kw name="Then le lien &quot;View Basket&quot; sera ajouter au dessus de l'article" library="Ajouter_article">
 <doc>ce keyword permet d'ajouter un article au panier</doc>
@@ -247,43 +247,43 @@
 <arg>${xpath_view_basket}</arg>
 <arg>${default_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:30.465" endtime="20220901 10:28:30.999"/>
+<status status="PASS" endtime="20220901 10:40:18.217" starttime="20220901 10:40:17.744"/>
 </kw>
 <kw name="Page Should Contain Link" library="SeleniumLibrary">
 <arg>${xpath_view_basket}</arg>
 <doc>Verifies link identified by ``locator`` is found from current page.</doc>
-<msg timestamp="20220901 10:28:31.039" level="INFO">Current page contains link '//a[text()='View Basket']'.</msg>
-<status status="PASS" starttime="20220901 10:28:30.999" endtime="20220901 10:28:31.039"/>
+<msg timestamp="20220901 10:40:18.237" level="INFO">Current page contains link '//a[text()='View Basket']'.</msg>
+<status status="PASS" endtime="20220901 10:40:18.237" starttime="20220901 10:40:18.217"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>le lien "view basket" est bien affiché sur la page</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:31.039" endtime="20220901 10:28:31.039"/>
+<status status="PASS" endtime="20220901 10:40:18.239" starttime="20220901 10:40:18.238"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220901 10:28:34.049" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220901 10:28:31.039" endtime="20220901 10:28:34.049"/>
+<msg timestamp="20220901 10:40:21.250" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20220901 10:40:21.250" starttime="20220901 10:40:18.239"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:30.465" endtime="20220901 10:28:34.051"/>
+<status status="PASS" endtime="20220901 10:40:21.252" starttime="20220901 10:40:17.742"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:29.854" endtime="20220901 10:28:34.051"/>
+<status status="PASS" endtime="20220901 10:40:21.253" starttime="20220901 10:40:17.262"/>
 </test>
-<test id="s1-t3" name="Scenario: Consulter le panier apres l'ajout d'un article" line="21">
+<test id="s1-t3" name="Scenario: Consulter le panier apres l'ajout d'un article">
 <kw name="Given je suis sur la page des articles filtrés par une catégorie" library="Ajouter_article">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>//h3[contains(.,'JS')]</arg>
 <arg>${default_long_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:34.051" endtime="20220901 10:28:34.100"/>
+<status status="PASS" endtime="20220901 10:40:21.290" starttime="20220901 10:40:21.259"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>nous sommes dans la bonne categorie</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:34.101" endtime="20220901 10:28:34.101"/>
+<status status="PASS" endtime="20220901 10:40:21.293" starttime="20220901 10:40:21.291"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:34.051" endtime="20220901 10:28:34.101"/>
+<status status="PASS" endtime="20220901 10:40:21.293" starttime="20220901 10:40:21.258"/>
 </kw>
 <kw name="And j'ai basculé vers l'article souhaité" library="Consulter_panier">
 <arg>${article_name}</arg>
@@ -292,20 +292,20 @@
 <arg>${article_name}</arg>
 <arg>${default_long_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:34.101" endtime="20220901 10:28:34.133"/>
+<status status="PASS" endtime="20220901 10:40:21.328" starttime="20220901 10:40:21.296"/>
 </kw>
 <kw name="Mouse Over" library="SeleniumLibrary">
 <arg>${article_name}</arg>
 <doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20220901 10:28:34.133" level="INFO">Simulating Mouse Over on element '//h3[contains(text(),'Data')]'.</msg>
-<status status="PASS" starttime="20220901 10:28:34.133" endtime="20220901 10:28:34.443"/>
+<msg timestamp="20220901 10:40:21.330" level="INFO">Simulating Mouse Over on element '//h3[contains(text(),'Data')]'.</msg>
+<status status="PASS" endtime="20220901 10:40:21.610" starttime="20220901 10:40:21.329"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>hovering the mouse over the article well done</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:34.443" endtime="20220901 10:28:34.451"/>
+<status status="PASS" endtime="20220901 10:40:21.613" starttime="20220901 10:40:21.611"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:34.101" endtime="20220901 10:28:34.451"/>
+<status status="PASS" endtime="20220901 10:40:21.614" starttime="20220901 10:40:21.295"/>
 </kw>
 <kw name="And le lien &quot;View Basket&quot; est ajouté au dessus de l'article" library="Consulter_panier">
 <doc>ce keyword permet d'ajouter un article au panier</doc>
@@ -313,20 +313,20 @@
 <arg>${xpath_view_basket}</arg>
 <arg>${default_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:34.451" endtime="20220901 10:28:34.499"/>
+<status status="PASS" endtime="20220901 10:40:21.652" starttime="20220901 10:40:21.617"/>
 </kw>
 <kw name="Page Should Contain Link" library="SeleniumLibrary">
 <arg>${xpath_view_basket}</arg>
 <doc>Verifies link identified by ``locator`` is found from current page.</doc>
-<msg timestamp="20220901 10:28:34.535" level="INFO">Current page contains link '//a[text()='View Basket']'.</msg>
-<status status="PASS" starttime="20220901 10:28:34.507" endtime="20220901 10:28:34.535"/>
+<msg timestamp="20220901 10:40:21.675" level="INFO">Current page contains link '//a[text()='View Basket']'.</msg>
+<status status="PASS" endtime="20220901 10:40:21.675" starttime="20220901 10:40:21.653"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>le lien "view basket" est bien affiché sur la page</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:34.535" endtime="20220901 10:28:34.535"/>
+<status status="PASS" endtime="20220901 10:40:21.677" starttime="20220901 10:40:21.675"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:34.451" endtime="20220901 10:28:34.535"/>
+<status status="PASS" endtime="20220901 10:40:21.678" starttime="20220901 10:40:21.616"/>
 </kw>
 <kw name="When je clique sur le lien &quot;view Basket&quot;" library="Consulter_panier">
 <arg>${xpath_view_basket}</arg>
@@ -334,15 +334,15 @@
 <kw name="Click Link" library="SeleniumLibrary">
 <arg>${xpath_view_basket}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:34.564" level="INFO">Clicking link '//a[text()='View Basket']'.</msg>
-<status status="PASS" starttime="20220901 10:28:34.564" endtime="20220901 10:28:36.714"/>
+<msg timestamp="20220901 10:40:21.681" level="INFO">Clicking link '//a[text()='View Basket']'.</msg>
+<status status="PASS" endtime="20220901 10:40:22.894" starttime="20220901 10:40:21.680"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>le lien "view basket" est bien cliqué</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:36.714" endtime="20220901 10:28:36.714"/>
+<status status="PASS" endtime="20220901 10:40:22.896" starttime="20220901 10:40:22.895"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:34.564" endtime="20220901 10:28:36.714"/>
+<status status="PASS" endtime="20220901 10:40:22.897" starttime="20220901 10:40:21.679"/>
 </kw>
 <kw name="Then je vais me rediriger vers la page de panier" library="Consulter_panier">
 <arg>${url_panier}</arg>
@@ -350,15 +350,15 @@
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>${url_panier}</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20220901 10:28:36.738" level="INFO">Current location is 'https://practice.automationtesting.in/basket/'.</msg>
-<status status="PASS" starttime="20220901 10:28:36.722" endtime="20220901 10:28:36.738"/>
+<msg timestamp="20220901 10:40:22.906" level="INFO">Current location is 'https://practice.automationtesting.in/basket/'.</msg>
+<status status="PASS" endtime="20220901 10:40:22.906" starttime="20220901 10:40:22.900"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>on est dans l'éspace panier</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:36.738" endtime="20220901 10:28:36.738"/>
+<status status="PASS" endtime="20220901 10:40:22.908" starttime="20220901 10:40:22.907"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:36.722" endtime="20220901 10:28:36.745"/>
+<status status="PASS" endtime="20220901 10:40:22.908" starttime="20220901 10:40:22.899"/>
 </kw>
 <kw name="And l'article choisi est bien ajouté dans l'espace panier" library="Consulter_panier">
 <arg>${table_aricles}</arg>
@@ -368,45 +368,45 @@
 <arg>3</arg>
 <arg>${article_namee}</arg>
 <doc>Verifies table cell contains text ``expected``.</doc>
-<msg timestamp="20220901 10:28:36.898" level="INFO">Table cell contains 'JS Data Structures and Algorithm'.</msg>
-<status status="PASS" starttime="20220901 10:28:36.746" endtime="20220901 10:28:36.899"/>
+<msg timestamp="20220901 10:40:22.981" level="INFO">Table cell contains 'JS Data Structures and Algorithm'.</msg>
+<status status="PASS" endtime="20220901 10:40:22.981" starttime="20220901 10:40:22.911"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>le produit ${article_namee}est bien ajouté</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:36.900" endtime="20220901 10:28:36.902"/>
+<status status="PASS" endtime="20220901 10:40:22.983" starttime="20220901 10:40:22.982"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220901 10:28:39.905" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20220901 10:28:36.903" endtime="20220901 10:28:39.905"/>
+<msg timestamp="20220901 10:40:25.993" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20220901 10:40:25.993" starttime="20220901 10:40:22.983"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:36.746" endtime="20220901 10:28:39.905"/>
+<status status="PASS" endtime="20220901 10:40:25.993" starttime="20220901 10:40:22.909"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:34.051" endtime="20220901 10:28:39.905"/>
+<status status="PASS" endtime="20220901 10:40:25.995" starttime="20220901 10:40:21.256"/>
 </test>
-<test id="s1-t4" name="Scenario: Vérifier les détails de l'article dans le panier" line="29">
+<test id="s1-t4" name="Scenario: Vérifier les détails de l'article dans le panier">
 <kw name="Given J'ai déja ajouté un article dans le panier" library="Panier_keywords">
 <kw name="No Operation" library="BuiltIn">
 <doc>Does absolutely nothing.</doc>
-<status status="PASS" starttime="20220901 10:28:39.905" endtime="20220901 10:28:39.905"/>
+<status status="PASS" endtime="20220901 10:40:26.002" starttime="20220901 10:40:26.001"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:39.905" endtime="20220901 10:28:39.905"/>
+<status status="PASS" endtime="20220901 10:40:26.002" starttime="20220901 10:40:26.000"/>
 </kw>
 <kw name="When Je suis sur la page panier" library="Panier_keywords">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${page_panier}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20220901 10:28:39.959" level="INFO">Element '//th[text()='Product']' is displayed.</msg>
-<status status="PASS" starttime="20220901 10:28:39.905" endtime="20220901 10:28:39.959"/>
+<msg timestamp="20220901 10:40:26.042" level="INFO">Element '//th[text()='Product']' is displayed.</msg>
+<status status="PASS" endtime="20220901 10:40:26.042" starttime="20220901 10:40:26.004"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>page panier vérifier</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:39.959" endtime="20220901 10:28:39.959"/>
+<status status="PASS" endtime="20220901 10:40:26.044" starttime="20220901 10:40:26.042"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:39.905" endtime="20220901 10:28:39.959"/>
+<status status="PASS" endtime="20220901 10:40:26.045" starttime="20220901 10:40:26.003"/>
 </kw>
 <kw name="Then La page panier affichera les détails de l'article ajouté" library="Panier_keywords">
 <arg>${article_panier_name}</arg>
@@ -416,95 +416,95 @@
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${page_panier}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:39.959" endtime="20220901 10:28:39.994"/>
+<status status="PASS" endtime="20220901 10:40:26.079" starttime="20220901 10:40:26.048"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${xpath_articlename}</arg>
 <arg>${article_name}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220901 10:28:40.050" level="INFO">Element '//td[@class='product-name']/child::a' contains text 'JS Data Structures and Algorithm'.</msg>
-<status status="PASS" starttime="20220901 10:28:39.994" endtime="20220901 10:28:40.051"/>
+<msg timestamp="20220901 10:40:26.111" level="INFO">Element '//td[@class='product-name']/child::a' contains text 'JS Data Structures and Algorithm'.</msg>
+<status status="PASS" endtime="20220901 10:40:26.112" starttime="20220901 10:40:26.080"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Article name vérifier</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:40.051" endtime="20220901 10:28:40.051"/>
+<status status="PASS" endtime="20220901 10:40:26.114" starttime="20220901 10:40:26.112"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${xpath_price}</arg>
 <arg>${price}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220901 10:28:40.100" level="INFO">Element '//td[@class="product-price"]/child::span' contains text '150.00'.</msg>
-<status status="PASS" starttime="20220901 10:28:40.051" endtime="20220901 10:28:40.100"/>
+<msg timestamp="20220901 10:40:26.149" level="INFO">Element '//td[@class="product-price"]/child::span' contains text '150.00'.</msg>
+<status status="PASS" endtime="20220901 10:40:26.149" starttime="20220901 10:40:26.114"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Price bien vérifier</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:40.100" endtime="20220901 10:28:40.100"/>
+<status status="PASS" endtime="20220901 10:40:26.152" starttime="20220901 10:40:26.150"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${xpath_quantity}</arg>
 <arg>${default_long_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:40.100" endtime="20220901 10:28:40.159"/>
+<status status="PASS" endtime="20220901 10:40:26.196" starttime="20220901 10:40:26.153"/>
 </kw>
 <kw name="Get Value" library="SeleniumLibrary">
 <var>${value_quantity}</var>
 <arg>${xpath_quantity}</arg>
 <doc>Returns the value attribute of the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:40.209" level="INFO">${value_quantity} = 1</msg>
-<status status="PASS" starttime="20220901 10:28:40.159" endtime="20220901 10:28:40.209"/>
+<msg timestamp="20220901 10:40:26.220" level="INFO">${value_quantity} = 1</msg>
+<status status="PASS" endtime="20220901 10:40:26.220" starttime="20220901 10:40:26.197"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>la valeur de la quantité : ${value_quantity}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:40.209" endtime="20220901 10:28:40.209"/>
+<status status="PASS" endtime="20220901 10:40:26.222" starttime="20220901 10:40:26.220"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${value_quantity}</arg>
 <arg>${quantity}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20220901 10:28:40.209" endtime="20220901 10:28:40.209"/>
+<status status="PASS" endtime="20220901 10:40:26.224" starttime="20220901 10:40:26.223"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${xpath_totalprice}</arg>
 <arg>${total_price}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220901 10:28:40.266" level="INFO">Element '//td[@class="product-subtotal"]/child::span' contains text '150.00'.</msg>
-<status status="PASS" starttime="20220901 10:28:40.209" endtime="20220901 10:28:40.266"/>
+<msg timestamp="20220901 10:40:26.257" level="INFO">Element '//td[@class="product-subtotal"]/child::span' contains text '150.00'.</msg>
+<status status="PASS" endtime="20220901 10:40:26.257" starttime="20220901 10:40:26.224"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Tous les élements sont vérifiés!</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:40.266" endtime="20220901 10:28:40.266"/>
+<status status="PASS" endtime="20220901 10:40:26.259" starttime="20220901 10:40:26.258"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:39.959" endtime="20220901 10:28:40.266"/>
+<status status="PASS" endtime="20220901 10:40:26.260" starttime="20220901 10:40:26.046"/>
 </kw>
 <kw name="And Le bouton de suppression s'affichera" library="Panier_keywords">
 <kw name="Element Should Be Enabled" library="SeleniumLibrary">
 <arg>${xpath_delete_button}</arg>
 <doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220901 10:28:40.266" endtime="20220901 10:28:40.344"/>
+<status status="PASS" endtime="20220901 10:40:26.301" starttime="20220901 10:40:26.262"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Bouton de suppression vérifier</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:40.344" endtime="20220901 10:28:40.344"/>
+<status status="PASS" endtime="20220901 10:40:26.303" starttime="20220901 10:40:26.301"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:40.266" endtime="20220901 10:28:40.344"/>
+<status status="PASS" endtime="20220901 10:40:26.304" starttime="20220901 10:40:26.261"/>
 </kw>
 <kw name="And Le champ quantité sera modifiable" library="Panier_keywords">
 <kw name="Element Should Be Enabled" library="SeleniumLibrary">
 <arg>${xpath_quantity}</arg>
 <doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" starttime="20220901 10:28:40.344" endtime="20220901 10:28:40.403"/>
+<status status="PASS" endtime="20220901 10:40:26.343" starttime="20220901 10:40:26.306"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>l'element quantity est modifiable</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:40.403" endtime="20220901 10:28:40.403"/>
+<status status="PASS" endtime="20220901 10:40:26.346" starttime="20220901 10:40:26.344"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:40.344" endtime="20220901 10:28:40.403"/>
+<status status="PASS" endtime="20220901 10:40:26.346" starttime="20220901 10:40:26.305"/>
 </kw>
 <kw name="And Le pavet &quot;Basket Totals&quot; s'affichera avec ces éléments" library="Panier_keywords">
 <arg>${basket_subtotal}</arg>
@@ -514,296 +514,482 @@
 <arg>${xpath_basket_title}</arg>
 <arg>${default_long_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:40.403" endtime="20220901 10:28:40.457"/>
+<status status="PASS" endtime="20220901 10:40:26.387" starttime="20220901 10:40:26.350"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>le titre Basket Totals est visible</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:40.457" endtime="20220901 10:28:40.457"/>
+<status status="PASS" endtime="20220901 10:40:26.389" starttime="20220901 10:40:26.388"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${xpath_basket_subtotal}</arg>
 <arg>${subtotal}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220901 10:28:40.508" level="INFO">Element '//td[@data-title="Subtotal"]//child::span' contains text '150.00'.</msg>
-<status status="PASS" starttime="20220901 10:28:40.457" endtime="20220901 10:28:40.508"/>
+<msg timestamp="20220901 10:40:26.420" level="INFO">Element '//td[@data-title="Subtotal"]//child::span' contains text '150.00'.</msg>
+<status status="PASS" endtime="20220901 10:40:26.420" starttime="20220901 10:40:26.390"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>le Subtotal est bien vérifier</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:40.508" endtime="20220901 10:28:40.508"/>
+<status status="PASS" endtime="20220901 10:40:26.422" starttime="20220901 10:40:26.420"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${xpath_basket_tax}</arg>
 <arg>${tax}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20220901 10:28:40.728" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-34.png"&gt;&lt;img src="selenium-screenshot-34.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20220901 10:28:40.728" level="FAIL">Element with locator '//td[@data-title='Roaming Tax']/child::span' not found.</msg>
-<status status="FAIL" starttime="20220901 10:28:40.508" endtime="20220901 10:28:40.734"/>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220901 10:40:26.564" html="true" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-35.png"&gt;&lt;img src="selenium-screenshot-35.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20220901 10:40:26.564" starttime="20220901 10:40:26.441"/>
+</kw>
+<msg timestamp="20220901 10:40:26.568" level="FAIL">Element with locator '//td[@data-title='Roaming Tax']/child::span' not found.</msg>
+<status status="FAIL" endtime="20220901 10:40:26.568" starttime="20220901 10:40:26.422"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>la taxe est bien vérifier</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220901 10:28:40.734" endtime="20220901 10:28:40.734"/>
+<status status="NOT RUN" endtime="20220901 10:40:26.570" starttime="20220901 10:40:26.570"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>${xpath_basket_totalprice}</arg>
 <arg>${total}</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="NOT RUN" starttime="20220901 10:28:40.734" endtime="20220901 10:28:40.734"/>
+<status status="NOT RUN" endtime="20220901 10:40:26.572" starttime="20220901 10:40:26.572"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>le totale est bien vérifier</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20220901 10:28:40.734" endtime="20220901 10:28:40.734"/>
+<status status="NOT RUN" endtime="20220901 10:40:26.573" starttime="20220901 10:40:26.572"/>
 </kw>
-<status status="FAIL" starttime="20220901 10:28:40.403" endtime="20220901 10:28:40.734"/>
+<status status="FAIL" endtime="20220901 10:40:26.574" starttime="20220901 10:40:26.347"/>
 </kw>
 <kw name="And Le bouton &quot;Proceed To Checkout&quot; S'affichera" library="Panier_keywords">
-<status status="NOT RUN" starttime="20220901 10:28:40.734" endtime="20220901 10:28:40.734"/>
+<status status="NOT RUN" endtime="20220901 10:40:26.576" starttime="20220901 10:40:26.576"/>
 </kw>
-<status status="FAIL" starttime="20220901 10:28:39.905" endtime="20220901 10:28:40.734">Element with locator '//td[@data-title='Roaming Tax']/child::span' not found.</status>
+<status status="FAIL" endtime="20220901 10:40:26.576" starttime="20220901 10:40:25.998">Element with locator '//td[@data-title='Roaming Tax']/child::span' not found.</status>
 </test>
-<test id="s1-t5" name="Scenario: test case" line="38">
+<test id="s1-t5" name="Scenario: test case">
 <kw name="Given Je click sur le bouton &quot;proceed to checkout&quot;" library="Panier">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${XpathProceed}</arg>
 <arg>${default_long_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:40.750" endtime="20220901 10:28:40.796"/>
+<status status="PASS" endtime="20220901 10:40:26.615" starttime="20220901 10:40:26.582"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${XpathProceed}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:40.796" level="INFO">Clicking element '//a[contains(text(),'Proceed to Checkout')]'.</msg>
-<status status="PASS" starttime="20220901 10:28:40.796" endtime="20220901 10:28:42.841"/>
+<msg timestamp="20220901 10:40:26.617" level="INFO">Clicking element '//a[contains(text(),'Proceed to Checkout')]'.</msg>
+<status status="PASS" endtime="20220901 10:40:27.643" starttime="20220901 10:40:26.616"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>element cliquer</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:42.841" endtime="20220901 10:28:42.843"/>
+<status status="PASS" endtime="20220901 10:40:27.645" starttime="20220901 10:40:27.643"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:40.750" endtime="20220901 10:28:42.843"/>
+<status status="PASS" endtime="20220901 10:40:27.646" starttime="20220901 10:40:26.582"/>
 </kw>
 <kw name="When je saisis les champs" library="CheckOut">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${XpathFirstName}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:42.846" endtime="20220901 10:28:42.902"/>
+<status status="PASS" endtime="20220901 10:40:27.680" starttime="20220901 10:40:27.648"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${XpathFirstName}</arg>
 <arg>${Firstname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:42.904" level="INFO">Typing text 'Adam' into text field '//input[@id='billing_first_name']'.</msg>
-<status status="PASS" starttime="20220901 10:28:42.904" endtime="20220901 10:28:43.177"/>
+<msg timestamp="20220901 10:40:27.682" level="INFO">Typing text 'Adam' into text field '//input[@id='billing_first_name']'.</msg>
+<status status="PASS" endtime="20220901 10:40:27.786" starttime="20220901 10:40:27.680"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${XpathLastName}</arg>
 <arg>${Lastname}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:43.177" level="INFO">Typing text 'Uzumez' into text field '//input[@id='billing_last_name']'.</msg>
-<status status="PASS" starttime="20220901 10:28:43.177" endtime="20220901 10:28:43.376"/>
+<msg timestamp="20220901 10:40:27.787" level="INFO">Typing text 'Uzumez' into text field '//input[@id='billing_last_name']'.</msg>
+<status status="PASS" endtime="20220901 10:40:27.935" starttime="20220901 10:40:27.787"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${XpathEmail}</arg>
 <arg>${E-mail}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:43.376" level="INFO">Typing text 'adam@gmail.com' into text field '//input[@id='billing_email']'.</msg>
-<status status="PASS" starttime="20220901 10:28:43.376" endtime="20220901 10:28:43.563"/>
+<msg timestamp="20220901 10:40:27.936" level="INFO">Typing text 'adam@gmail.com' into text field '//input[@id='billing_email']'.</msg>
+<status status="PASS" endtime="20220901 10:40:28.036" starttime="20220901 10:40:27.935"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${XpathPhone}</arg>
 <arg>${Phone}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:43.572" level="INFO">Typing text '0666666666' into text field '//input[@id='billing_phone']'.</msg>
-<status status="PASS" starttime="20220901 10:28:43.563" endtime="20220901 10:28:43.765"/>
+<msg timestamp="20220901 10:40:28.037" level="INFO">Typing text '0666666666' into text field '//input[@id='billing_phone']'.</msg>
+<status status="PASS" endtime="20220901 10:40:28.146" starttime="20220901 10:40:28.036"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${XpathAdress}</arg>
 <arg>${Adress}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:43.773" level="INFO">Typing text 'Sidimaarouf' into text field '//input[@id='billing_address_1']'.</msg>
-<status status="PASS" starttime="20220901 10:28:43.765" endtime="20220901 10:28:44.039"/>
+<msg timestamp="20220901 10:40:28.148" level="INFO">Typing text 'Sidimaarouf' into text field '//input[@id='billing_address_1']'.</msg>
+<status status="PASS" endtime="20220901 10:40:28.284" starttime="20220901 10:40:28.147"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${XpathCity}</arg>
 <arg>${city}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:44.042" level="INFO">Typing text 'Casablanca' into text field '//input[@id='billing_city']'.</msg>
-<status status="PASS" starttime="20220901 10:28:44.040" endtime="20220901 10:28:44.262"/>
+<msg timestamp="20220901 10:40:28.286" level="INFO">Typing text 'Casablanca' into text field '//input[@id='billing_city']'.</msg>
+<status status="PASS" endtime="20220901 10:40:28.396" starttime="20220901 10:40:28.285"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${XpathZip}</arg>
 <arg>${Zip}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:44.269" level="INFO">Typing text '63200' into text field '//input[@id='billing_postcode']'.</msg>
-<status status="PASS" starttime="20220901 10:28:44.262" endtime="20220901 10:28:44.456"/>
+<msg timestamp="20220901 10:40:28.398" level="INFO">Typing text '63200' into text field '//input[@id='billing_postcode']'.</msg>
+<status status="PASS" endtime="20220901 10:40:28.515" starttime="20220901 10:40:28.397"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>elements remplis</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:44.456" endtime="20220901 10:28:44.459"/>
+<status status="PASS" endtime="20220901 10:40:28.517" starttime="20220901 10:40:28.516"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:42.845" endtime="20220901 10:28:44.459"/>
+<status status="PASS" endtime="20220901 10:40:28.517" starttime="20220901 10:40:27.646"/>
 </kw>
 <kw name="And je choisis un methode de paiement" library="CheckOut">
 <kw name="Page Should Contain Radio Button" library="SeleniumLibrary">
 <arg>${XpathRadiobutton}</arg>
 <doc>Verifies radio button ``locator`` is found from current page.</doc>
-<msg timestamp="20220901 10:28:44.504" level="INFO">Current page contains radio button '//input[@id='payment_method_bacs']'.</msg>
-<status status="PASS" starttime="20220901 10:28:44.461" endtime="20220901 10:28:44.504"/>
+<msg timestamp="20220901 10:40:28.550" level="INFO">Current page contains radio button '//input[@id='payment_method_bacs']'.</msg>
+<status status="PASS" endtime="20220901 10:40:28.551" starttime="20220901 10:40:28.519"/>
 </kw>
 <kw name="Select Radio Button" library="SeleniumLibrary">
 <arg>${NameRadioButton}</arg>
 <arg>${ValueRadioButton}</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<msg timestamp="20220901 10:28:44.520" level="INFO">Selecting 'bacs' from radio button 'payment_method'.</msg>
-<status status="PASS" starttime="20220901 10:28:44.520" endtime="20220901 10:28:44.547"/>
+<msg timestamp="20220901 10:40:28.552" level="INFO">Selecting 'bacs' from radio button 'payment_method'.</msg>
+<status status="PASS" endtime="20220901 10:40:28.579" starttime="20220901 10:40:28.551"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:44.461" endtime="20220901 10:28:44.547"/>
+<status status="PASS" endtime="20220901 10:40:28.580" starttime="20220901 10:40:28.518"/>
 </kw>
 <kw name="And je click sur le bouton &quot;placeorder&quot;" library="CheckOut">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${XpathPlace}</arg>
 <arg>${default_long_timeout}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:44.547" endtime="20220901 10:28:44.582"/>
+<status status="PASS" endtime="20220901 10:40:28.613" starttime="20220901 10:40:28.582"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${XpathPlace}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:44.582" level="INFO">Clicking element '//input[@id='place_order']'.</msg>
-<status status="PASS" starttime="20220901 10:28:44.582" endtime="20220901 10:28:44.779"/>
+<msg timestamp="20220901 10:40:28.615" level="INFO">Clicking element '//input[@id='place_order']'.</msg>
+<status status="PASS" endtime="20220901 10:40:28.745" starttime="20220901 10:40:28.614"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>element cliquer</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:44.779" endtime="20220901 10:28:44.779"/>
+<status status="PASS" endtime="20220901 10:40:28.753" starttime="20220901 10:40:28.745"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:44.547" endtime="20220901 10:28:44.779"/>
+<status status="PASS" endtime="20220901 10:40:28.753" starttime="20220901 10:40:28.581"/>
 </kw>
 <kw name="Then je suis rederiger vers la page de confirmation" library="OrderConf">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${checkout_page}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:44.779" endtime="20220901 10:28:44.862"/>
+<status status="PASS" endtime="20220901 10:40:28.801" starttime="20220901 10:40:28.755"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>nous somme dans la page de confirmation</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:44.862" endtime="20220901 10:28:44.862"/>
+<status status="PASS" endtime="20220901 10:40:28.804" starttime="20220901 10:40:28.802"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:44.779" endtime="20220901 10:28:44.862"/>
+<status status="PASS" endtime="20220901 10:40:28.804" starttime="20220901 10:40:28.754"/>
 </kw>
 <kw name="And je verifie les details de la commande" library="OrderConf">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${XpathOrderReceived}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220901 10:28:44.870" endtime="20220901 10:28:47.416"/>
+<status status="PASS" endtime="20220901 10:40:30.648" starttime="20220901 10:40:28.807"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${Order_Number}</var>
 <arg>${XpathVerifOrderNumber}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:47.466" level="INFO">${Order_Number} = ORDER NUMBER:
-12424</msg>
-<status status="PASS" starttime="20220901 10:28:47.416" endtime="20220901 10:28:47.466"/>
+<msg timestamp="20220901 10:40:30.682" level="INFO">${Order_Number} = ORDER NUMBER:
+12426</msg>
+<status status="PASS" endtime="20220901 10:40:30.683" starttime="20220901 10:40:30.649"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${Date}</var>
 <arg>${XpathVerifDate}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:47.507" level="INFO">${Date} = DATE:
+<msg timestamp="20220901 10:40:30.712" level="INFO">${Date} = DATE:
 September 1, 2022</msg>
-<status status="PASS" starttime="20220901 10:28:47.466" endtime="20220901 10:28:47.507"/>
+<status status="PASS" endtime="20220901 10:40:30.713" starttime="20220901 10:40:30.683"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${Total}</var>
 <arg>${XpathVerifTotal}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:47.559" level="INFO">${Total} = TOTAL:
+<msg timestamp="20220901 10:40:30.743" level="INFO">${Total} = TOTAL:
 ₹153.00</msg>
-<status status="PASS" starttime="20220901 10:28:47.507" endtime="20220901 10:28:47.559"/>
+<status status="PASS" endtime="20220901 10:40:30.743" starttime="20220901 10:40:30.713"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${Payment_Methode}</var>
 <arg>${XpathVerifMethode}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:47.605" level="INFO">${Payment_Methode} = PAYMENT METHOD:
+<msg timestamp="20220901 10:40:30.770" level="INFO">${Payment_Methode} = PAYMENT METHOD:
 Direct Bank Transfer</msg>
-<status status="PASS" starttime="20220901 10:28:47.559" endtime="20220901 10:28:47.607"/>
+<status status="PASS" endtime="20220901 10:40:30.771" starttime="20220901 10:40:30.744"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${Product_name}</var>
 <arg>${XpathVerifProductName}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:47.648" level="INFO">${Product_name} = JS Data Structures and Algorithm × 1</msg>
-<status status="PASS" starttime="20220901 10:28:47.607" endtime="20220901 10:28:47.648"/>
+<msg timestamp="20220901 10:40:30.799" level="INFO">${Product_name} = JS Data Structures and Algorithm × 1</msg>
+<status status="PASS" endtime="20220901 10:40:30.800" starttime="20220901 10:40:30.771"/>
 </kw>
 <kw name="Get Text" library="SeleniumLibrary">
 <var>${Product_Quantity}</var>
 <arg>${XpathVerifProductquatity}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<msg timestamp="20220901 10:28:47.750" level="INFO">${Product_Quantity} = × 1</msg>
-<status status="PASS" starttime="20220901 10:28:47.648" endtime="20220901 10:28:47.750"/>
+<msg timestamp="20220901 10:40:30.853" level="INFO">${Product_Quantity} = × 1</msg>
+<status status="PASS" endtime="20220901 10:40:30.853" starttime="20220901 10:40:30.800"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${Order_Number}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:47.750" endtime="20220901 10:28:47.758"/>
+<status status="PASS" endtime="20220901 10:40:30.856" starttime="20220901 10:40:30.854"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Order ${Date}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:47.758" endtime="20220901 10:28:47.758"/>
+<status status="PASS" endtime="20220901 10:40:30.858" starttime="20220901 10:40:30.856"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Order ${Total}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:47.758" endtime="20220901 10:28:47.758"/>
+<status status="PASS" endtime="20220901 10:40:30.859" starttime="20220901 10:40:30.858"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>${Payment_Methode}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:47.758" endtime="20220901 10:28:47.758"/>
+<status status="PASS" endtime="20220901 10:40:30.862" starttime="20220901 10:40:30.860"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Product Name : ${Product_name}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:47.758" endtime="20220901 10:28:47.767"/>
+<status status="PASS" endtime="20220901 10:40:30.864" starttime="20220901 10:40:30.863"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Product Quantity : ${Product_Quantity}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:47.767" endtime="20220901 10:28:47.767"/>
+<status status="PASS" endtime="20220901 10:40:30.868" starttime="20220901 10:40:30.866"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:44.862" endtime="20220901 10:28:47.767"/>
+<status status="PASS" endtime="20220901 10:40:30.868" starttime="20220901 10:40:28.806"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:40.750" endtime="20220901 10:28:47.767"/>
+<status status="PASS" endtime="20220901 10:40:30.868" starttime="20220901 10:40:26.580"/>
 </test>
-<kw name="Fermeture du navigateur" library="AutomationTest" type="TEARDOWN">
+<test id="s1-t6" name="Historique2">
+<kw name="Given Je suis dans la page &quot;MYACCOUNT&quot;" library="AutomationTestingHistorique">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpaths_dashboard}</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220901 10:40:30.913" starttime="20220901 10:40:30.878"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xpaths_dashboard}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220901 10:40:30.914" level="INFO">Clicking element '//a[contains(.,'My Account')]'.</msg>
+<status status="PASS" endtime="20220901 10:40:31.883" starttime="20220901 10:40:30.914"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>la page ouverte est MyACCOUNT</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220901 10:40:31.885" starttime="20220901 10:40:31.883"/>
+</kw>
+<status status="PASS" endtime="20220901 10:40:31.886" starttime="20220901 10:40:30.876"/>
+</kw>
+<kw name="When Je clique sur le bouton &quot;ORDERS&quot;" library="AutomationTestingHistorique">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xapths_order}</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220901 10:40:31.917" starttime="20220901 10:40:31.888"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${xapths_order}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220901 10:40:31.918" level="INFO">Clicking element '//a[contains(text(),'Orders')]'.</msg>
+<status status="PASS" endtime="20220901 10:40:33.109" starttime="20220901 10:40:31.917"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>element bien cliquer</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220901 10:40:33.111" starttime="20220901 10:40:33.110"/>
+</kw>
+<status status="PASS" endtime="20220901 10:40:33.111" starttime="20220901 10:40:31.887"/>
+</kw>
+<kw name="And Un tableau des commandes avec un bouton View s'affiche" library="AutomationTestingHistorique">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//a[contains(text(),'View')]</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220901 10:40:33.147" starttime="20220901 10:40:33.113"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le tableau existe avec succés</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220901 10:40:33.149" starttime="20220901 10:40:33.148"/>
+</kw>
+<status status="PASS" endtime="20220901 10:40:33.149" starttime="20220901 10:40:33.112"/>
+</kw>
+<kw name="And Je clique sur le bouton &quot;View&quot;" library="AutomationTestingHistorique">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[contains(text(),'View')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220901 10:40:33.151" level="INFO">Clicking element '//a[contains(text(),'View')]'.</msg>
+<status status="PASS" endtime="20220901 10:40:34.326" starttime="20220901 10:40:33.151"/>
+</kw>
+<status status="PASS" endtime="20220901 10:40:34.326" starttime="20220901 10:40:33.150"/>
+</kw>
+<kw name="Then la page contient &quot;&lt;Numero de commande&gt;&quot; et &quot;&lt;Date de commande&gt;&quot;" library="AutomationTestingHistorique">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_numero_ordre}</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220901 10:40:34.365" starttime="20220901 10:40:34.329"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${valeur_N_ordre}</var>
+<arg>${xpath_numero_ordre}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220901 10:40:34.393" level="INFO">${valeur_N_ordre} = 12426</msg>
+<status status="PASS" endtime="20220901 10:40:34.393" starttime="20220901 10:40:34.366"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Numero de commande est visible et sa valeur est: ${valeur_N_ordre}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220901 10:40:34.395" starttime="20220901 10:40:34.394"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_Date_de_commande}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220901 10:40:34.427" starttime="20220901 10:40:34.395"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${valeur_date_comande}</var>
+<arg>${xpath_Date_de_commande}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220901 10:40:34.452" level="INFO">${valeur_date_comande} = September 1, 2022</msg>
+<status status="PASS" endtime="20220901 10:40:34.452" starttime="20220901 10:40:34.428"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Date de commande est visible et sa valeur est: ${valeur_date_comande}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220901 10:40:34.454" starttime="20220901 10:40:34.453"/>
+</kw>
+<status status="PASS" endtime="20220901 10:40:34.455" starttime="20220901 10:40:34.327"/>
+</kw>
+<kw name="And un tableau avec &quot;&lt;Montant de commande&gt;&quot;,&quot;&lt;Moyen de paiement&gt;&quot; est affiché" library="AutomationTestingHistorique">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_Montant_de_commande}</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220901 10:40:34.488" starttime="20220901 10:40:34.458"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${valeur_montant}</var>
+<arg>${xpath_Montant_de_commande}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220901 10:40:34.516" level="INFO">${valeur_montant} = ₹150.00</msg>
+<status status="PASS" endtime="20220901 10:40:34.516" starttime="20220901 10:40:34.488"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le montant existe et sa valeur est: ${valeur_montant}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220901 10:40:34.518" starttime="20220901 10:40:34.517"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_Moyen_de_paiement}</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220901 10:40:34.599" starttime="20220901 10:40:34.518"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${valeur_moyen_paiement}</var>
+<arg>${xpath_Moyen_de_paiement}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220901 10:40:34.623" level="INFO">${valeur_moyen_paiement} = Direct Bank Transfer</msg>
+<status status="PASS" endtime="20220901 10:40:34.623" starttime="20220901 10:40:34.599"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le moyen de paiement existe et sa valeur est: ${valeur_moyen_paiement}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220901 10:40:34.624" starttime="20220901 10:40:34.623"/>
+</kw>
+<status status="PASS" endtime="20220901 10:40:34.624" starttime="20220901 10:40:34.456"/>
+</kw>
+<kw name="And un tableau contenant les informations de clients &quot;&lt;email&gt;&quot; et &quot;&lt;telephone&gt;&quot; est affiché" library="AutomationTestingHistorique">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_email_historique}</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220901 10:40:34.653" starttime="20220901 10:40:34.627"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${valeur_email}</var>
+<arg>${xpath_email_historique}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220901 10:40:34.677" level="INFO">${valeur_email} = adam@gmail.com</msg>
+<status status="PASS" endtime="20220901 10:40:34.677" starttime="20220901 10:40:34.654"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le mail du client est bien affiché ${valeur_email}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220901 10:40:34.678" starttime="20220901 10:40:34.677"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${xpath_phone_historique}</arg>
+<arg>${default_long_timeout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" endtime="20220901 10:40:34.703" starttime="20220901 10:40:34.678"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${valeur_phone}</var>
+<arg>${xpath_phone_historique}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220901 10:40:34.725" level="INFO">${valeur_phone} = 0666666666</msg>
+<status status="PASS" endtime="20220901 10:40:34.725" starttime="20220901 10:40:34.704"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>le telephone du client est bien affiché: ${valeur_phone}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" endtime="20220901 10:40:34.726" starttime="20220901 10:40:34.725"/>
+</kw>
+<status status="PASS" endtime="20220901 10:40:34.727" starttime="20220901 10:40:34.626"/>
+</kw>
+<status status="PASS" endtime="20220901 10:40:34.727" starttime="20220901 10:40:30.873"/>
+</test>
+<kw type="TEARDOWN" name="Fermeture du navigateur" library="AutomationTest">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220901 10:28:47.775" endtime="20220901 10:28:51.066"/>
+<status status="PASS" endtime="20220901 10:40:36.995" starttime="20220901 10:40:34.732"/>
 </kw>
 <kw name="Log To Console" library="BuiltIn">
 <arg>Browser is closed</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20220901 10:28:51.066" endtime="20220901 10:28:51.066"/>
+<status status="PASS" endtime="20220901 10:40:36.996" starttime="20220901 10:40:36.995"/>
 </kw>
-<status status="PASS" starttime="20220901 10:28:47.767" endtime="20220901 10:28:51.066"/>
+<status status="PASS" endtime="20220901 10:40:36.996" starttime="20220901 10:40:34.731"/>
 </kw>
-<status status="FAIL" starttime="20220901 10:27:13.506" endtime="20220901 10:28:51.066"/>
+<status status="FAIL" endtime="20220901 10:40:36.996" starttime="20220901 10:40:00.429"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="1" skip="0">All Tests</stat>
+<stat fail="1" skip="0" pass="5">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="1" skip="0" id="s1" name="Afficher Articles By Price">Afficher Articles By Price</stat>
+<stat fail="1" skip="0" id="s1" name="AutomatisationTesting" pass="5">AutomatisationTesting</stat>
 </suite>
 </statistics>
 <errors>
